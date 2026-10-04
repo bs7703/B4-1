@@ -1,0 +1,10 @@
+root@ubuntu:~# getent group agent-core agent-common >> condition3
+root@ubuntu:~# id agent-admin >> condition3
+root@ubuntu:~# id agent-dev >> condition3
+root@ubuntu:~# id agent-test >> condition3
+
+agent-core:x:1002:agent-admin,agent-dev
+agent-common:x:1001:
+uid=1000(agent-admin) gid=1001(agent-common) groups=1001(agent-common),1002(agent-core)
+uid=1001(agent-dev) gid=1001(agent-common) groups=1001(agent-common),1002(agent-core)
+uid=1002(agent-test) gid=1001(agent-common) groups=1001(agent-common)

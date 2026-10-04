@@ -1,0 +1,10 @@
+root@ubuntu:~# ss -tnl
+root@ubuntu:~# cat /etc/ssh/sshd_config | grep -E ^Permit > condition1
+root@ubuntu:~# cat /etc/ssh/sshd_config | grep -E ^Port >> condition1
+
+State            Recv-Q           Send-Q                      Local Address:Port                        Peer Address:Port
+LISTEN           0                128                               0.0.0.0:20022                            0.0.0.0:*
+LISTEN           0                128                                  [::]:20022
+
+PermitRootLogin no
+Port 20022

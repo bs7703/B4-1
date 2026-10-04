@@ -1,0 +1,10 @@
+ufw status > condition2
+
+Status: active
+
+To                         Action      From
+--                         ------      ----
+20022/tcp                  ALLOW       Anywhere                  
+15034/tcp                  ALLOW       Anywhere                  
+20022/tcp (v6)             ALLOW       Anywhere (v6)             
+15034/tcp (v6)             ALLOW       Anywhere (v6)             

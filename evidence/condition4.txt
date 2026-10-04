@@ -1,0 +1,52 @@
+ls -ld /home/agent-admin/agent-app/{upload_files,api_keys} \
+  /var/log/agent-app
+
+getfacl /home/agent-admin/agent-app/{upload_files,api_keys} \
+  /var/log/agent-app
+
+drwxrws---+ 1 agent-admin agent-core   44 Oct  3 16:38 /home/agent-admin/agent-app/api_keys
+drwxrwx---+ 1 agent-admin agent-common  0 Oct  3 14:27 /home/agent-admin/agent-app/upload_files
+drwxrws---+ 1 root        agent-core   74 Oct  4 14:12 /var/log/agent-app
+
+# file: var/log/agent-app
+# owner: root
+# group: agent-core
+# flags: -s-
+user::rwx
+group::rwx
+other::---
+default:user::rwx
+default:group::rwx
+default:other::---
+
+# file: home/agent-admin/agent-app/upload_files
+# owner: agent-admin
+# group: agent-common
+user::rwx
+group::rwx
+other::---
+default:user::rwx
+default:group::rwx
+default:other::---
+
+# file: home/agent-admin/agent-app/api_keys
+# owner: agent-admin
+# group: agent-core
+# flags: -s-
+user::rwx
+group::rwx
+other::---
+default:user::rwx
+default:group::rwx
+default:other::---
+
+# file: home/agent-admin/agent-app/upload_files
+# owner: agent-admin
+# group: agent-common
+user::rwx
+group::rwx
+other::---
+default:user::rwx
+default:group::rwx
+default:other::---
+

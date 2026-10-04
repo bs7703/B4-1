@@ -1,0 +1,37 @@
+root@ubuntu:~# /usr/sbin/sshd -T | grep -E '^(port|permitrootlogin) '
+ss -ltnp 'sport = :20022'
+ss -ltnp 'sport = :15034'
+
+ufw status verbose
+
+namei -l /home/agent-admin/agent-app/bin/monitor.sh
+ls -l /home/agent-admin/agent-app/bin/monitor.sh
+
+
+port 20022
+permitrootlogin no
+State       Recv-Q      Send-Q           Local Address:Port             Peer Address:Port      Process
+LISTEN      0           128                    0.0.0.0:20022                 0.0.0.0:*          users:(("sshd",pid=1352,fd=6))
+LISTEN      0           128                       [::]:20022                    [::]:*          users:(("sshd",pid=1352,fd=7))
+State      Recv-Q     Send-Q         Local Address:Port          Peer Address:Port    Process
+LISTEN     0          1                    0.0.0.0:15034              0.0.0.0:*        users:(("agent-app-linux",pid=5943,fd=4))
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+20022/tcp                  ALLOW IN    Anywhere
+15034/tcp                  ALLOW IN    Anywhere
+20022/tcp (v6)             ALLOW IN    Anywhere (v6)
+15034/tcp (v6)             ALLOW IN    Anywhere (v6)
+
+f: /home/agent-admin/agent-app/bin/monitor.sh
+drwxr-xr-x root        root         /
+drwxr-xr-x root        root         home
+drwxr-x--- agent-admin agent-common agent-admin
+drwxr-xr-x agent-admin agent-common agent-app
+drwxr-x--- agent-admin agent-core   bin
+-rw-r--r-- agent-dev   agent-core   monitor.sh
+-rw-r--r-- 1 agent-dev agent-core 10130 Oct  4 14:40 /home/agent-admin/agent-app/bin/monitor.sh

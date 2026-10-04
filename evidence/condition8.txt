@@ -1,0 +1,8 @@
+root@ubuntu:~# cat /var/log/agent-app/monitor.log >> condition8
+
+[2026-10-04 14:03:24] PID:4216,4217 CPU:1.5% MEM:4.5% DISK_USED:1%
+[2026-10-04 14:04:02] PID:4216,4217 CPU:5.0% MEM:5.6% DISK_USED:1%
+[2026-10-04 14:40:43] [ERROR] Process 'agent-app-linux-x86' not found for user 'agent-admin'.
+[2026-10-04 14:41:01] [ERROR] Process 'agent-app-linux-x86' not found for user 'agent-admin'.
+[2026-10-04 14:42:02] PID:5515,5516 CPU:3.9% MEM:5.1% DISK_USED:1%
+[2026-10-04 14:43:02] [ERROR] Process 'agent-app-linux-x86' not found for user 'agent-admin'.
