@@ -33,5 +33,5 @@ drwxr-xr-x root        root         home
 drwxr-x--- agent-admin agent-common agent-admin
 drwxr-xr-x agent-admin agent-common agent-app
 drwxr-x--- agent-admin agent-core   bin
--rw-r--r-- agent-dev   agent-core   monitor.sh
--rw-r--r-- 1 agent-dev agent-core 10130 Oct  4 14:40 /home/agent-admin/agent-app/bin/monitor.sh
+-rwxr-xr-- agent-dev   agent-core   monitor.sh
+-rwxr-xr-- 1 agent-dev agent-core 10130 Oct  4 14:40 /home/agent-admin/agent-app/bin/monitor.sh
